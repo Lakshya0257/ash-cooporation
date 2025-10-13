@@ -1,0 +1,168 @@
+/* Updated: 2025-10-13T11:42:59.043Z */
+/* Updated: 2025-10-13T11:31:03.394Z */
+/* Updated: 2025-10-13T09:47:07.034Z */
+/* Updated: 2025-10-13T09:44:49.574Z */
+/* Updated: 2025-10-13T07:21:20.300Z */
+/* Updated: 2025-10-12T21:55:36.284Z */
+/* Updated: 2025-10-12T13:15:53.568Z */
+/* Updated: 2025-10-12T10:00:40.150Z */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Inter', var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.99 0.002 85);
+  --foreground: oklch(0.15 0.01 85);
+  --card: oklch(0.98 0.005 85);
+  --card-foreground: oklch(0.15 0.01 85);
+  --popover: oklch(0.98 0.005 85);
+  --popover-foreground: oklch(0.15 0.01 85);
+  --primary: oklch(0.65 0.22 40);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.94 0.01 85);
+  --secondary-foreground: oklch(0.2 0.01 85);
+  --muted: oklch(0.95 0.008 85);
+  --muted-foreground: oklch(0.48 0.01 85);
+  --accent: oklch(0.65 0.22 40);
+  --accent-foreground: oklch(0.99 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.88 0.01 85);
+  --input: oklch(0.88 0.01 85);
+  --ring: oklch(0.65 0.22 40);
+  --chart-1: oklch(0.65 0.22 40);
+  --chart-2: oklch(0.55 0.2 60);
+  --chart-3: oklch(0.7 0.18 80);
+  --chart-4: oklch(0.6 0.18 30);
+  --chart-5: oklch(0.58 0.2 50);
+  --sidebar: oklch(0.98 0.005 85);
+  --sidebar-foreground: oklch(0.15 0.01 85);
+  --sidebar-primary: oklch(0.65 0.22 40);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.94 0.01 85);
+  --sidebar-accent-foreground: oklch(0.2 0.01 85);
+  --sidebar-border: oklch(0.88 0.01 85);
+  --sidebar-ring: oklch(0.65 0.22 40);
+}
+
+.dark {
+  --background: oklch(0.13 0.01 85);
+  --foreground: oklch(0.97 0.002 85);
+  --card: oklch(0.16 0.012 85);
+  --card-foreground: oklch(0.97 0.002 85);
+  --popover: oklch(0.16 0.012 85);
+  --popover-foreground: oklch(0.97 0.002 85);
+  --primary: oklch(0.68 0.2 45);
+  --primary-foreground: oklch(0.13 0.01 85);
+  --secondary: oklch(0.2 0.012 85);
+  --secondary-foreground: oklch(0.97 0.002 85);
+  --muted: oklch(0.2 0.012 85);
+  --muted-foreground: oklch(0.6 0.01 85);
+  --accent: oklch(0.68 0.2 45);
+  --accent-foreground: oklch(0.13 0.01 85);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(0.24 0.012 85);
+  --input: oklch(0.24 0.012 85);
+  --ring: oklch(0.68 0.2 45);
+  --chart-1: oklch(0.68 0.2 45);
+  --chart-2: oklch(0.58 0.18 60);
+  --chart-3: oklch(0.72 0.16 80);
+  --chart-4: oklch(0.62 0.16 30);
+  --chart-5: oklch(0.6 0.18 50);
+  --sidebar: oklch(0.16 0.012 85);
+  --sidebar-foreground: oklch(0.97 0.002 85);
+  --sidebar-primary: oklch(0.68 0.2 45);
+  --sidebar-primary-foreground: oklch(0.13 0.01 85);
+  --sidebar-accent: oklch(0.2 0.012 85);
+  --sidebar-accent-foreground: oklch(0.97 0.002 85);
+  --sidebar-border: oklch(0.24 0.012 85);
+  --sidebar-ring: oklch(0.68 0.2 45);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  
+  html {
+    font-size: 14px;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.125rem;
+  }
+
+  p, span, div {
+    font-size: 0.875rem;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
+}
+
+/* Hide Next.js error overlay portal */
+nextjs-portal {
+  display: none !important;
+}
