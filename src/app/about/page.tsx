@@ -6,21 +6,20 @@ import PersonalGallery from "@/components/PersonalGallery";
 import Footer from "@/components/Footer";
 import GradualBlur from "@/components/ui/gradual-blur";
 
-
 export default function AboutPage() {
   return (
-   <>
-    <div className="min-h-screen">
-      <Navigation />
-      <main className="pt-20">
-        <About />
-        <VideoBackground />
-        <MissionVision />
-        <PersonalGallery />
-      </main>
-      
-      <Footer />
-    </div>
+    <>
+      <div className="min-h-screen">
+        <Navigation />
+        <main className="pt-20">
+          <About />
+          <VideoBackground />
+          {/* <MissionVision /> */}
+          <PersonalGallery />
+        </main>
+
+        <Footer />
+      </div>
     </>
   );
 }

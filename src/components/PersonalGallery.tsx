@@ -15,59 +15,61 @@ export default function PersonalGallery() {
 
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
-      title: "Team Collaboration",
-      description: "Working with the team on a new product launch"
+      src: "/gallery/g1.png",
+      title: "Scottland",
+      description: "My dream destination trip",
     },
     {
-      src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80",
-      title: "Conference Speaking",
-      description: "Presenting at React Summit 2023"
+      src: "/gallery/g2.png",
+      title: "Me",
+      description: "And only me",
     },
     {
-      src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80",
-      title: "Workspace Setup",
-      description: "My daily coding environment"
+      src: "/gallery/g3.png",
+      title: "Me",
+      description: "Just me again",
     },
     {
-      src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
-      title: "Brainstorming Session",
-      description: "Planning the architecture for a new feature"
+      src: "/gallery/g4.png",
+      title: "Me",
+      description: "Me once more",
     },
     {
-      src: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&q=80",
-      title: "Code Review",
-      description: "Pair programming with a colleague"
+      src: "/gallery/g5.png",
+      title: "Jaipur",
+      description: "Amer Fort",
     },
     {
-      src: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80",
-      title: "Design Workshop",
-      description: "Collaborating with designers on UI mockups"
+      src: "/gallery/g6.png",
+      title: "Rajasthan",
+      description: "City Palace",
     },
     {
-      src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+      src: "/gallery/g7.png",
       title: "Project Kickoff",
-      description: "Starting a new exciting project"
+      description: "Starting a new exciting project",
     },
     {
-      src: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80",
-      title: "Mentoring Session",
-      description: "Teaching junior developers best practices"
+      src: "/gallery/g8.png",
+      title: "Me",
+      description: "Me yet again",
     },
     {
-      src: "https://images.unsplash.com/photo-1527525443983-6e60c75fff46?w=800&q=80",
-      title: "Team Celebration",
-      description: "Celebrating a successful product launch"
-    }
+      src: "/gallery/g9.png",
+      title: "Chennai",
+      description: "Me at Marina Beach",
+    },
   ];
 
   const navigateImage = (direction: "prev" | "next") => {
     if (selectedImage === null) return;
-    
+
     if (direction === "next") {
       setSelectedImage((selectedImage + 1) % galleryImages.length);
     } else {
-      setSelectedImage(selectedImage === 0 ? galleryImages.length - 1 : selectedImage - 1);
+      setSelectedImage(
+        selectedImage === 0 ? galleryImages.length - 1 : selectedImage - 1
+      );
     }
   };
 
@@ -88,7 +90,8 @@ export default function PersonalGallery() {
             Moments & Memories
           </h3>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A glimpse into my professional journey – from conferences to team collaborations
+            A curated collection of personal photographs capturing memorable
+            moments and experiences.
           </p>
         </motion.div>
 
@@ -198,8 +201,6 @@ export default function PersonalGallery() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      
     </section>
   );
 }

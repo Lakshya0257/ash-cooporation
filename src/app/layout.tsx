@@ -5,10 +5,12 @@ import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import GradualBlur from "@/components/ui/gradual-blur";
+// import { Head } from "next/document";
 
 export const metadata: Metadata = {
-  title: "Alex Johnson - Full Stack Developer & UI/UX Designer",
-  description: "Portfolio of Alex Johnson - A passionate full stack developer specializing in building exceptional digital experiences with clean code and thoughtful design.",
+  title: "Aashi Chaudhary - Mobile Application Developer",
+  description:
+    "Portfolio of Aashi Chaudhary - A passionate mobile application developer specializing in building exceptional digital experiences with clean code and thoughtful design.",
 };
 
 export default function RootLayout({
@@ -18,6 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/profile.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/profile.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/profile.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/profile.png" />
+      </head>
       <body className="antialiased">
         <ThemeProvider>
           <ErrorReporter />
@@ -33,11 +41,14 @@ export default function RootLayout({
           />
           {children}
         </ThemeProvider>
-        <GradualBlur preset="page-footer"
-    divCount={5}
-    curve="bezier"
-    exponential={true}
-    opacity={1} strength={5} />
+        <GradualBlur
+          preset="page-footer"
+          divCount={5}
+          curve="bezier"
+          exponential={true}
+          opacity={1}
+          strength={5}
+        />
       </body>
     </html>
   );

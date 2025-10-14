@@ -10,7 +10,7 @@ export default function VideoBackground() {
   const ref = useRef(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -20,7 +20,11 @@ export default function VideoBackground() {
   };
 
   return (
-    <section id="philosophy" className="relative h-screen overflow-hidden" ref={ref}>
+    <section
+      id="philosophy"
+      className="relative h-screen overflow-hidden"
+      ref={ref}
+    >
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -73,12 +77,17 @@ export default function VideoBackground() {
               My Philosophy
             </h2>
             <h3 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-              Crafting Digital Experiences
+              Crafting Thoughtful Digital Experiences
             </h3>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-12">
-              I believe in building products that not only solve problems but delight users. 
-              Every pixel, every interaction, every line of code matters in creating something 
-              truly exceptional.
+            <p className="text-sm text-white/90 max-w-2xl mx-auto leading-relaxed mb-12">
+              I believe that design and development are two sides of the same
+              craft — both driven by empathy, precision, and creativity. Every
+              interaction, every animation, and every line of code should serve
+              a purpose and create value for the user. My philosophy is simple:
+              build with intent, design with clarity, and code with care. I
+              strive to create products that not only solve problems but also
+              inspire confidence and delight through their simplicity and
+              impact.
             </p>
 
             {/* Stats */}
@@ -90,17 +99,17 @@ export default function VideoBackground() {
             >
               {[
                 {
-                  number: "5+",
-                  label: "Years Experience",
+                  number: "~1",
+                  label: "Year Experience",
                 },
                 {
-                  number: "50+",
+                  number: "8+",
                   label: "Projects Completed",
                 },
                 {
                   number: "100%",
                   label: "Commitment",
-                }
+                },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}

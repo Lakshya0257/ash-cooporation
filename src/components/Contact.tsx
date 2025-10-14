@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Send, CheckCircle2, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Send, CheckCircle2, Github, Linkedin } from "lucide-react";
 import GradualBlur from "@/components/ui/gradual-blur";
 
 export default function Contact() {
@@ -21,9 +21,8 @@ export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Github, href: "https://github.com/aashichaudhary", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/aashi-chaudhary", label: "LinkedIn" },
   ];
 
   const validateForm = () => {
@@ -55,7 +54,19 @@ export default function Contact() {
     }
 
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    // Compose email with form data
+    const subject = encodeURIComponent(`Message from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    const mailtoLink = `mailto:aashichaudhary62004@gmail.com?subject=${subject}&body=${body}`;
+
+    // Open email client
+    window.location.href = mailtoLink;
+
+    // Show success message
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     setIsSubmitting(false);
     setIsSubmitted(true);
 
@@ -103,12 +114,12 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-12"
           >
-            <a 
-              href="mailto:alex.johnson@email.com"
+            <a
+              href="mailto:aashichaudhary62004@gmail.com"
               className="inline-flex items-center gap-2 text-lg hover:text-primary transition-colors"
             >
               <Mail className="h-5 w-5" />
-              alex.johnson@email.com
+              aashichaudhary62004@gmail.com
             </a>
           </motion.div>
 

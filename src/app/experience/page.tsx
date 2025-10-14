@@ -9,7 +9,7 @@ export default function ExperiencePage() {
       <Navigation />
       <main className="pt-20">
         <Experience />
-        <Testimonials />
+        {/* <Testimonials /> */}
       </main>
       <Footer />
     </div>

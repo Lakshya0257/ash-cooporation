@@ -61,7 +61,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="text-xl font-bold hover:text-primary transition-colors">
-            AJ
+            AC
           </Link>
 
           {/* Desktop Navigation */}

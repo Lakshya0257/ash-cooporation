@@ -18,7 +18,7 @@ export default function Hero() {
   const roles = [
     "developer",
     "designer",
-    "creator",
+    "innovator",
     "problem solver"
   ];
 
@@ -48,10 +48,10 @@ export default function Hero() {
   }, [displayedText, currentRoleIndex, isDeleting]);
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Mail, href: "/contact", label: "Email" }
+    { icon: Github, href: "https://github.com/Aashich64", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/aashichaudhary06/", label: "LinkedIn" },
+    // { icon: Twitter, href: "#", label: "Twitter" },
+    // { icon: Mail, href: "/contact", label: "Email" }
   ];
 
   return (
@@ -74,7 +74,7 @@ export default function Hero() {
               className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl"
             >
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+                src="/profile.png"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
@@ -89,7 +89,7 @@ export default function Hero() {
             className="h-[180px] !w-full md:!h-[71px]"
           >
             <TextPressure 
-              text="AASHI CHOUDHARY"
+              text="AASHI CHAUDHARY"
               textColor="currentColor"
               minFontSize={48}
               width={true}
@@ -128,8 +128,7 @@ export default function Hero() {
                 className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
               >
                 <p>
-                  Building thoughtful digital experiences with clean code and attention to detail.
-                  Currently focused on creating products that people love to use.
+                  Crafting seamless digital experiences where design meets functionality. I turn ideas into intuitive, engaging, and meaningful products.
                 </p>
               </motion.div>
             {/* </FadeContent> */}

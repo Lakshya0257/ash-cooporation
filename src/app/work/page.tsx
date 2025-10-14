@@ -12,8 +12,8 @@ export default function WorkPage() {
       <main className="pt-20">
         <Projects />
         <ProjectProcess />
-        <BehindTheScenes />
-        <SystemDesign />
+        {/* <BehindTheScenes />
+        <SystemDesign /> */}
       </main>
       <Footer />
     </div>

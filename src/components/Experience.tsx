@@ -10,28 +10,28 @@ export default function Experience() {
 
   const experiences = [
     {
-      title: "Senior Developer",
-      company: "TechCorp",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
+      title: "Jr. Flutter Developer",
+      company: "IMG Global Infotech",
+      location: "India",
+      period: "May 2024 - Present",
       description:
-        "Leading development of web applications. Working with React, Next.js, and Node.js to build scalable solutions.",
+        "Working as a Flutter developer on real-world applications with a focus on responsive UI/UX and scalable architecture. Collaborating closely with backend and design teams to implement app features using Dart and state management solutions like Riverpod/GetX/Provider. Writing clean, maintainable code and participating in code reviews and agile sprint planning.",
     },
     {
-      title: "Full Stack Developer",
-      company: "Digital Studio",
-      location: "New York, NY",
-      period: "2020 - 2022",
+      title: "Flutter Developer Intern",
+      company: "RICOZ",
+      location: "India",
+      period: "November 2023 - April 2024",
       description:
-        "Built customer-facing applications and internal tools. Collaborated with designers to create pixel-perfect implementations.",
+        "Developed and implemented end-to-end front-end functionality using Dart and Flutter, improving user engagement. Collaborated with backend developers and UI/UX designers to ensure seamless integration and appealing interfaces. Applied advanced state management techniques to maintain scalable, maintainable architecture.",
     },
     {
-      title: "Frontend Developer",
-      company: "Creative Agency",
-      location: "Los Angeles, CA",
-      period: "2019 - 2020",
+      title: "Full Stack Android App Developer",
+      company: "CipherByte Technologies",
+      location: "India",
+      period: "September 2023 - October 2023",
       description:
-        "Created engaging web experiences. Focused on performance, accessibility, and clean code.",
+        "Developed and deployed a fully functional Android application, handling both frontend and backend development. Designed intuitive UI/UX layouts for seamless user interaction and responsiveness. Implemented robust state management techniques to handle dynamic content updates.",
     },
   ];
 
@@ -96,8 +96,9 @@ export default function Experience() {
           </h4>
           <div className="space-y-4">
             <div>
-              <h5 className="font-semibold mb-1">Bachelor of Science in Computer Science</h5>
-              <p className="text-sm text-muted-foreground">University of Technology · 2015 - 2019</p>
+              <h5 className="font-semibold mb-1">Bachelor of Technology in Computer Science and Engineering</h5>
+              <p className="text-sm text-muted-foreground">Vellore Institute of Technology, Bhopal · August 2021 - August 2025</p>
+              <p className="text-sm text-muted-foreground mt-1">CGPA: 8.13/10</p>
             </div>
           </div>
         </motion.div>

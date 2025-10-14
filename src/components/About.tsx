@@ -10,12 +10,12 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const skills = [
-    { name: "React & Next.js", level: 95 },
-    { name: "TypeScript", level: 90 },
-    { name: "Node.js", level: 85 },
-    { name: "UI/UX Design", level: 88 },
-    { name: "PostgreSQL", level: 80 },
-    { name: "Tailwind CSS", level: 95 },
+    { name: "Flutter & Dart", level: 95 },
+    { name: "Riverpod & Provider", level: 90 },
+    { name: "Firebase", level: 88 },
+    { name: "UI/UX Design", level: 92 },
+    { name: "Java & DSA", level: 90 },
+    { name: "Git & Version Control", level: 95 },
   ];
 
   return (
@@ -29,7 +29,9 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h2 className="text-sm uppercase tracking-wider text-muted-foreground mb-4">About</h2>
+            <h2 className="text-sm uppercase tracking-wider text-muted-foreground mb-4">
+              About
+            </h2>
             <h3 className="text-3xl md:text-5xl font-bold mb-8">
               A bit about me
             </h3>
@@ -47,18 +49,25 @@ export default function About() {
               className="space-y-6 text-muted-foreground leading-relaxed"
             >
               <p>
-                I'm a developer based in San Francisco with a passion for creating clean, 
-                functional web experiences. I've been working in web development for over 5 years, 
-                building everything from simple landing pages to complex web applications.
+                I’m a developer and designer from India, passionate about
+                building seamless, user-centered digital experiences. I love
+                combining creativity with clean, efficient code to bring ideas
+                to life through elegant and intuitive applications.
               </p>
               <p>
-                I enjoy the process of turning ideas into reality through code. Whether it's 
-                designing interfaces, writing clean code, or solving complex problems, I approach 
-                each project with attention to detail and a focus on quality.
+                My focus lies in Flutter development, where I specialize in
+                crafting responsive, scalable, and visually appealing mobile
+                apps using Dart, Riverpod, and Provider for state management.
+                With a strong eye for UI/UX design, I strive to make every
+                product not just functional — but delightful to use.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies, contributing to 
-                open source, or sharing what I've learned with others.
+                Over the years, I’ve worked on real-world projects that blend
+                design and development, from emergency service apps to AI-driven
+                interview platforms. What drives me is turning ideas into
+                meaningful, impactful solutions that people truly connect with.
+                When I’m not coding, I enjoy exploring new design ideas,
+                learning emerging technologies, or losing myself in a good book.
               </p>
             </motion.div>
           </FadeContent>
@@ -83,7 +92,9 @@ export default function About() {
                   >
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-medium">{skill.name}</span>
-                      <span className="text-sm text-muted-foreground">{skill.level}%</span>
+                      <span className="text-sm text-muted-foreground">
+                        {skill.level}%
+                      </span>
                     </div>
                     <div className="h-1.5 bg-muted rounded-full overflow-hidden">
                       <motion.div

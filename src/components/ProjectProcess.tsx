@@ -13,69 +13,75 @@ export default function ProjectProcess() {
     {
       icon: Lightbulb,
       title: "Discovery & Research",
-      description: "Understanding the problem space, user needs, and business goals through research and analysis.",
+      description:
+        "Understanding the problem space, user needs, and business goals through research and analysis.",
       steps: [
         "Stakeholder interviews",
         "User research & personas",
         "Competitive analysis",
-        "Requirements gathering"
-      ]
+        "Requirements gathering",
+      ],
     },
     {
       icon: Target,
       title: "Strategy & Planning",
-      description: "Defining project scope, technical architecture, and creating a roadmap for execution.",
+      description:
+        "Defining project scope, technical architecture, and creating a roadmap for execution.",
       steps: [
         "Technical architecture design",
         "Project roadmap creation",
         "Resource allocation",
-        "Timeline planning"
-      ]
+        "Timeline planning",
+      ],
     },
     {
       icon: Palette,
       title: "Design & Prototyping",
-      description: "Creating wireframes, mockups, and interactive prototypes to visualize the solution.",
+      description:
+        "Creating wireframes, mockups, and interactive prototypes to visualize the solution.",
       steps: [
         "Wireframing & user flows",
         "Visual design & branding",
         "Interactive prototypes",
-        "Usability testing"
-      ]
+        "Usability testing",
+      ],
     },
     {
       icon: Code,
       title: "Development",
-      description: "Building the solution with clean, maintainable code following best practices.",
+      description:
+        "Building the solution with clean, maintainable code following best practices.",
       steps: [
         "Frontend development",
         "Backend & API integration",
         "Database design",
-        "Code reviews & testing"
-      ]
+        "Code reviews & testing",
+      ],
     },
     {
       icon: Users,
       title: "Testing & Refinement",
-      description: "Ensuring quality through rigorous testing and gathering user feedback.",
+      description:
+        "Ensuring quality through rigorous testing and gathering user feedback.",
       steps: [
         "Unit & integration testing",
         "User acceptance testing",
         "Performance optimization",
-        "Bug fixes & refinements"
-      ]
+        "Bug fixes & refinements",
+      ],
     },
     {
       icon: Rocket,
       title: "Launch & Iteration",
-      description: "Deploying to production and continuously improving based on real-world usage.",
+      description:
+        "Deploying to production and continuously improving based on real-world usage.",
       steps: [
         "Production deployment",
         "Monitoring & analytics",
         "User feedback collection",
-        "Continuous improvements"
-      ]
-    }
+        "Continuous improvements",
+      ],
+    },
   ];
 
   return (
@@ -88,18 +94,18 @@ export default function ProjectProcess() {
           transition={{ duration: 0.6 }}
           className="mb-20 text-center"
         >
-          <h2 className="text-sm uppercase tracking-wider text-muted-foreground mb-4">Process</h2>
-          <h3 className="text-3xl md:text-5xl font-bold mb-6">
-            How I work
-          </h3>
+          <h2 className="text-sm uppercase tracking-wider text-muted-foreground mb-4">
+            Process
+          </h2>
+          <h3 className="text-3xl md:text-5xl font-bold mb-6">How I work</h3>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            My approach to problem-solving combines strategic thinking, creative design, 
-            and technical expertise to deliver exceptional results.
+            My approach to problem-solving combines strategic thinking, creative
+            design, and technical expertise to deliver exceptional results.
           </p>
         </motion.div>
 
         {/* Process Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {phases.map((phase, index) => (
             <motion.div
               key={phase.title}
@@ -136,7 +142,10 @@ export default function ProjectProcess() {
                       key={stepIndex}
                       initial={{ opacity: 0, x: -10 }}
                       animate={isInView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ duration: 0.4, delay: index * 0.1 + stepIndex * 0.05 }}
+                      transition={{
+                        duration: 0.4,
+                        delay: index * 0.1 + stepIndex * 0.05,
+                      }}
                       className="flex items-start gap-2 text-xs text-muted-foreground"
                     >
                       <span className="text-primary mt-0.5">•</span>
